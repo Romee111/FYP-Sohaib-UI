@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./productlisting.css">
+    <title>Product Listing</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <div class="filter-type">
+                      <input id="filter-cat" type="checkbox" name="filter-type" checked/>
+                      <label for="filter-cat" ><h6>Category</h6></label>
+                      <ul class="samples">
+                        <div class="cat-name" routerLink="">
+                        <li>Watches</li>
+                        <li>Beauty</li>
+                        <li>Accessories</li>
+                        <li>Special</li>
+                        </div>
+                      </ul>
+                     </div>
+                     <div class="filter-type">
+                       <input id="filter-sty" type="checkbox" name="filter-type" checked/>
+                       <label for="filter-sty"> <h4> Redoock Hub</h4>
+                       </label>
+                       <ul>
+                           <li> Redock Fragrances</li>
+                           <li> Redock Beauty</li>
+                           <li>Redock watches</li>
+                           <li> Redock Special</li>
+                           
+                       </ul>
+                     </div>
+                    
+                     </div>
+            </div>
+            <div class="col-md-9">
+                 <div class="product">
+                                    <div class="card" style="width: 15rem;" *ngFor="let data of getData" (click)="showProductDetail(data)">
+                                        
+                                        <div class="card-body">
+                                          <i class="bi bi-heart"></i>
+                                         
+                                          <img src="./assests/13399.jpg" class="card-img-top" alt="..." style="width:100%;">
+                                          <h5 class="card-title">Sohaib Pawa</h5>
+                                          <p class="card-text">react Master</p>
+                                          <div class="detaprice d-flex">
+                                            <p class="card-text">Frontendengineer with whole knowldge of programming frameworks</p> 
+                                            <!-- <p [ngStyle]="{ color:data.stock ? 'green' : 'red'}" class="stock">{{data.stock? 
+                                            'instock' : 'out of stock'}}</p> -->
+                                          </div>
+                                                                    
+                
+                                        
+                                          <a href="#" class="btn" (click)="addToCart(data)" >Add to Cart</a>
+                
+                                        </div>
+                                      </div>
+                
+                                    
+                                </div>
+                              </div>
+                       
+                    </div>
+                </div>
+            
+      
+      
+    
+</body>
+</html>
